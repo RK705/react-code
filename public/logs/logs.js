@@ -37,7 +37,7 @@ async function getData() {
     date.textContent = item.date;
     image.src = item.image;
     image.alt = 'Try to make a good Expression';
-
+    mood.innerHTML = "div {overflow: hidden; text-overflow: ellipsis;}";
     root.append(image,date,geo,mood);
      root.classList.add("col-xs-12")
       root.classList.add("col-md-6")

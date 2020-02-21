@@ -14,18 +14,7 @@
 
 <link rel="stylesheet" type="text/css" href="style.css" />
 <title>Selfie App</title>
- <script type="text/javascript">
- function setColor(e) {
-   var target = e.target,
-       status = e.target.classList.contains('active');
 
-   e.target.classList.add(status ? 'inactive' : 'active');
-   e.target.classList.remove(status ? 'active' : 'inactive'); 
-
-  
-}
-  
-</script>
   </head>
   <body>
    
@@ -45,7 +34,7 @@
 
     <div class="container">
       <div class="row center">
-        <button class="btn btn-secondary " id="submit" onclick="setColor(event)">Submit</button>
+        <button class="btn btn-secondary " id="submit" onclick="alert('Data stored')">Submit</button>
       </div>
     <div class="row center">
       <div class=" col-lg-4  px-auto py-auto">

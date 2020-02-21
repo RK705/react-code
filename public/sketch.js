@@ -42,3 +42,4 @@ function setup() {
     console.log('geolocation not available');
   }
 }
+

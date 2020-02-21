@@ -29,14 +29,15 @@ async function getData() {
     root.style.fontSize = "15px"
     root.style.paddingBottom = "3%"
      root.style.fontStyle = "oblique"
-   console.log("for  chal rha h");
+   console.log("for loop  chal rha h");
 
-    mood.textContent = `Hashtag: ${item.story}`;
+    
     geo.textContent = `${item.lat}°, ${item.longi}°`;
     const dateString = new Date(item.timestamp).toLocaleString();
     date.textContent = item.date;
     image.src = item.image;
     image.alt = 'Try to make a good Expression';
+    mood.textContent = `Hashtag: ${item.story}`;
 
     root.append(mood,geo,date,image);
      root.classList.add("col-xs-12")

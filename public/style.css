@@ -14,14 +14,7 @@ video{
 .btn{  
    background-color:#1c8ef9!important;
 }
-
-.active {
-   background-color: #7FFF00;  
- }
  
- .inactive {
-   background-color: #1c8ef9!important;
- } 
  input {
   background-color: transparent;
   color: black;
@@ -48,7 +41,8 @@ h1{
 .row{
 	margin-top:3%;
 	margin-top:3%;
-	padding:4%;
+   padding:4%;
+   text-align:center;
 }
 
 

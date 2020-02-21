@@ -1,7 +1,7 @@
 getData();
 
 async function getData() {
-  const options = {
+    const options = {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -11,10 +11,9 @@ async function getData() {
   const response = await fetch('/api/getall',options)
   console.log("api chal rha h");
   const json = await response.json().then((res)=>{
-    document.getElementById("23").remove()
+  document.getElementById("23").remove()
     return res
   });
-  ;
   console.log("json chal rha h",json);
   const root1 = document.getElementById("row");
   
@@ -28,8 +27,8 @@ async function getData() {
     root.style.textAlign = "center"
     root.style.fontSize = "15px"
     root.style.paddingBottom = "3%"
-     root.style.fontStyle = "oblique"
-   console.log("for  chal rha h");
+    root.style.fontStyle = "oblique"
+    console.log("for  chal rha h");
 
     mood.textContent = `Hashtag: ${item.story}`;
     geo.textContent = `${item.lat}°, ${item.longi}°`;
@@ -37,17 +36,14 @@ async function getData() {
     date.textContent = item.date;
     image.src = item.image;
     image.alt = 'Try to make a good Expression';
-    mood.innerHTML = "div {overflow: hidden; text-overflow: ellipsis;}";
-    root.append(image,date,geo,mood);
-     root.classList.add("col-xs-12")
-      root.classList.add("col-md-6")
+    root.append(image, date, geo, mood);
+    root.classList.add("col-xs-12")
+    root.classList.add("col-md-6")
     root.classList.add("col-lg-4")
     
     //document.("data").appendChild(root)
     root1.appendChild(root);
-  }
+    }
     console.log("for k baahr chal rha h");
-  console.log(data);
+    console.log(data);
 }
-
-

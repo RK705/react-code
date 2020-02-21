@@ -14,9 +14,14 @@ video{
 .btn{  
    background-color:#1c8ef9!important;
 }
-.btn:focus{
-   background-color:grey;
-}
+
+.active {
+   background-color: #7FFF00;  
+ }
+ 
+ .inactive {
+   background-color: #1c8ef9!important;
+ } 
  input {
   background-color: transparent;
   color: black;

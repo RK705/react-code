@@ -8,8 +8,11 @@ async function getData() {
       'Authorization': 'Bearer '+localStorage.getItem('token')
     },
   };
-  const response = await fetch('/api/getall',options);
-  document.getElementById("23").remove()
+  const response = await fetch('/api/getall',options).then((res)=>{
+    document.getElementById("23").remove()
+    return res
+  });
+  
   console.log("api chal rha h");
   const json = await response.json();
   console.log("json chal rha h",json);

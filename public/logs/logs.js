@@ -9,6 +9,7 @@ async function getData() {
     },
   };
   const response = await fetch('/api/getall',options);
+  document.getElementsByClassName("loader").remove()
   console.log("api chal rha h");
   const json = await response.json();
   console.log("json chal rha h",json);

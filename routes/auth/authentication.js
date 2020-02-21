@@ -11,6 +11,10 @@ router.post("/register",async (req,res,next)=>{
         const data=req.body
         const passhash=await bcrypt.hash(data.pass,8)
         console.log("Hash ho gyaa",passhash)
+        if(data.user.length<1 || data.pass.length<1 || data.name.length<1){
+            res.status(401).send("Either username or pass or name not provided")
+        }
+        else{
         const newus=new User({
               name:data.name,
               passHash:passhash,
@@ -20,6 +24,7 @@ router.post("/register",async (req,res,next)=>{
             console.log("Save ho gyaa bava")
         })
         res.status(200).send("Registration Successfull")
+    }
     }
     catch(e){
         next(e)

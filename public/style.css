@@ -38,15 +38,18 @@ h1{
 .x{
 	text-align:right;
 }
+.y{
+   text-align:center;
+}
 .row{
-	margin-top:3%;
+	margin-top:1%;
 	margin-top:3%;
    padding:4%;
 }
 .c{
   margin-left:47%;
-  margin-top:0%;
-  margin-bottom:0%;
+  margin-top:1%;
+ 
 }
 
 @media screen and (max-width: 800px) {

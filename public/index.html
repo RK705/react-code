@@ -32,19 +32,15 @@
     <h1>Selfie App</h1>
 
     <div class="container">
-     <div class="row center">
-      
-       <div class=" col-lg-6 x py-auto">
+     
         <button class="btn btn-secondary c" id="submit" onclick="alert('Your hashtag and selfie have been saved. Please check out the Gallery to revisit your submissions')">Submit</button>
-       </div>
-       <div class=" col-lg-6 x py-auto">
-        <button class="btn btn-secondary" onclick="window.location.href = '/main/logs';">Gallery</a></button>
-       </div>
-     </div>
     <div class="row center">
-      
+      <div class=" col-lg-4  px-auto py-auto">
+      <b>Latitude:</b> <span id="latitude"></span>&deg;<br />
+      <b>Longitude</b>: <span id="longitude"></span>&deg;
+    </div>
 
-          <div class=" col-lg-6 y px-auto py-auto">
+          <div class=" col-lg-4 y px-auto py-auto">
             <input
               type="text"
               placeholder="Enter your Hashtag"
@@ -53,12 +49,10 @@
             />
              
           </div>
-            
-          <div class=" col-lg-6  px-auto py-auto">
-            <b>Latitude:</b> <span id="latitude"></span>&deg;<br />
-            <b>Longitude</b>: <span id="longitude"></span>&deg;
-          </div>
-           
+
+           <div class=" col-lg-4 x py-auto">
+     <button class="btn btn-secondary" onclick="window.location.href = '/main/logs';">Gallery</a></button>
+    </div>
         </div>
     </div>
     </div>

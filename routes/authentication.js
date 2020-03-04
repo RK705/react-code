@@ -15,10 +15,15 @@ router.post("/register",async (req,res,next)=>{
               passHash:passhash,
               username:data.user
             })
-        newus.save(()=>{
-            console.log("Save ho gyaa bava")
+        newus.save((e)=>{
+            if(e){
+                res.status(450).send("User Exist")
+            }
+            else{
+                res.status(200).send("Registration Successfull")
+            }
+            
         })
-        res.status(200).send("Registration Successfull")
     }
     catch(e){
         next(e)

@@ -21,7 +21,7 @@ router.post("/register",async (req,res,next)=>{
               username:data.user
             })
         newus.save((e)=>{
-            if(a){
+            if(e){
                 res.status(401).send("Registration Failed")
             }
             else{

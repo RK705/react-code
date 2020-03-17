@@ -57,4 +57,37 @@ router.post('/setaccess',async(req,res,next)=>{
         }
 })
 
+//id of photo to be deleted given by user
+router.post('/delpic',async(req,res,next)=>{
+        try{
+                const data=req.body
+                const tokendata=req.decodedToken
+                const retdata=await Images.remove(
+                        { _id:data.imageid }
+                        )
+                res.status(200).send("Request Access Successfull")
+        }
+        catch(e){
+                res.status(401).send("Delete failed")
+                next(e)
+        }
+})
+
+//id of the photo to be edited
+router.post('/setaccess',async(req,res,next)=>{
+        try{
+                const data=req.body
+                const tokendata=req.decodedToken
+                const retdata=await Images.update(
+                        {_id:data.id},
+                        {"$set":{story:data.story}}
+                        )
+                res.status(200).send("Request Access Successfull")
+        }
+        catch(e){
+                res.status(401).send("Request Access failed")
+                next(e)
+        }
+})
+
 module.exports=router
